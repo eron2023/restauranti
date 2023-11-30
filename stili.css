@@ -1,0 +1,527 @@
+/* stili.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #262729;
+}
+
+nav {
+    background-color: #333639;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure the navigation is on top of other elements */
+  }
+  
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.header {
+    position: relative;
+    overflow: hidden;
+    margin-top: 28px; /* Adjust margin-top as needed */
+  }
+
+  .header img {
+    width: 100%;
+    height: 100%;
+    margin-top: 19px;
+    filter: brightness(70%);
+    margin-bottom: 0%;
+     /* Adjust max-height as needed */
+  }
+
+  .header-overlay {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff; /* Adjust the color as needed */
+    text-align: center;
+    z-index: 1;
+  }
+
+
+  .header-overlay h1 {
+    font-size: 45px; /* Adjust the font size as needed */
+    margin-bottom: 10px;
+  }
+
+  .header-overlay p {
+    font-size: 18px; /* Adjust the font size as needed */
+  }
+  /*Content Section*/
+  .content-section {
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+   background-color: #262729; /* Set the background image */
+    color: #ffffff; /* Set the text color */
+    
+  }
+.h1-section {
+   color: rgb(174, 98, 44);
+}
+  .left-content {
+    width: 45%;
+    /* Set a dark overlay on the left content */
+    padding: 20px;
+  }
+
+  .left-content h1 {
+    font-size: 2em; /* Adjust the font size as needed */
+    margin-bottom: 10px;
+  }
+
+  .left-content p {
+    font-size: 1.2em; /* Adjust the font size as needed */
+    margin-bottom: 15px;
+  }
+
+  .left-content ul {
+    list-style: none;
+    padding: 0;
+   
+  }
+
+  .left-content ul li {
+    margin-bottom: 20px;
+    margin-left: 16px;
+    list-style-type:circle;
+  }
+
+  .right-content img {
+    width: 100%;
+    height: auto;
+  }
+/*Login form*/
+#main-content,
+#login,
+#register {
+    margin-top: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Your existing styles here */
+
+
+
+/* Content Section Styles */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.left-content {
+    width: 45%;
+}
+
+.right-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* Slider Navigation Arrows Styles */
+.slick-prev,
+.slick-next {
+  font-size: 16px; /* Adjust the font size as needed */
+  color: #fff;
+
+  border: none;
+  padding: 5px; /* Adjust the padding as needed */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+/* Add this CSS to your existing styles or create a new style file */
+/* Add this CSS to your existing styles or create a new style file */
+
+#why-choose-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #262729; /* Set the background color */
+  color: white; /* Set the text color */
+}
+
+#why-choose-us .left-content img {
+  width: 100%;
+  height: auto;
+}
+
+#why-choose-us .right-content {
+  width: 50%; /* Adjust the width as needed */
+}
+
+#why-choose-us h2 {
+  font-size: 2em; /* Adjust the font size as needed */
+  margin-bottom: 20px;
+  color: rgb(174, 98, 44); /* Set the heading color */
+}
+
+#why-choose-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Add this CSS to your existing styles or create a new style file */
+
+#why-choose-us ul li {
+  margin-bottom: 15px; /* Adjust the margin as needed */
+  position: relative;
+  display: flex;
+  align-items: center; /* Align the content vertically in each list item */
+}
+
+#why-choose-us ul li::before {
+  content: '\2022'; /* Unicode character for a bullet point */
+  color: rgb(174, 98, 44); /* Set the bullet point color */
+  font-size: 1.5em; /* Adjust the font size as needed */
+  margin-right: 10px; /* Adjust the spacing between the bullet point and text */
+}
+
+#why-choose-us p {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  line-height: 1.6; /* Adjust the line height as needed */
+}
+
+
+
+/* Add this CSS to your existing styles or create a new style file */
+#contact-us {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    border-top: 1px solid #37332a;
+   
+    
+  }
+
+  #contact-form {
+    width: 60%;
+    max-width: 600px;
+    text-align: center;
+    color: white;
+    
+  }
+
+  #contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #contact-form button {
+    width: 100%;
+    background-color: rgb(174, 98, 44);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #contact-form button:hover {
+    background-color: rgb(185, 88, 19);
+  }
+
+  #contact-info {
+    max-width: 300px;
+    text-align: left;
+  }
+
+  #contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #contact-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  #header {
+    text-align: center;
+    color: white;
+    padding-top: 60px ; /* Adjust the padding as needed */
+}
+
+#header h1 {
+    font-size: 30px;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+
+  #left-content {
+    width: 30%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .circle {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(174, 98, 44);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .info-text {
+    flex-grow: 1;
+  }
+  
+  #left-content h2 {
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  #left-content p {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+
+
+
+#footer {
+    background: #333639;
+    padding: 0 0 30px 0;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  #footer .footer-top {
+    background: #0c0b09;
+    border-top: 1px solid #37332a;
+    border-bottom: 1px solid #28251f;
+    padding: 60px 0 30px 0;
+    
+  }
+  
+  #footer .footer-top .footer-info {
+    margin-bottom: 30px;
+  }
+  
+  #footer .footer-top .footer-info h3 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    margin-left: 50px;
+  }
+  
+  #footer .footer-top .footer-info p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    margin-left: 50px;
+  }
+  #footer .footer-top h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    padding-bottom: 12px;
+  }
+
+  #footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  #footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+  }
+  /*Login*/
+  #login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  #login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-header {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  #register-link {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  #register {
+    display: none;
+  }
+  #register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #register-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  .regjister-header {
+    margin-bottom: 20px; 
+    text-align: center;/* Adjust margin as needed */
+  }
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  /*shigjeta per web*/
+  .floating-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: 2px solid rgb(174, 98, 44);
+    border-radius: 50%;
+    padding: 10px;
+    color: rgb(174, 98, 44);
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .floating-arrow.show {
+    opacity: 1;
+    background-color: rgba(255, 165, 0, 0.1); 
+  }

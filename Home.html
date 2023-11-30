@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="stili.css">
+  <!-- Add a link to the Slick slider CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div>
+      <!-- Replace the logo image with text -->
+      <span class="logo-text"><a href="Home.html">RESTAURANT VENECIA</a></span>
+    </div>
+    <ul>
+      <li><a href="Home.html">Faqja Kryesore</a></li>
+   
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="kontakti.html">Kontakti</a></li>
+      <li><a href="Login.html" id="login-link">Login</a></li>
+    </ul>
+  </nav>
+ 
+
+  <!-- Header Section -->
+  <section class="header">
+    <div class="header-overlay">
+   
+      <h1>Restaurant Venecia</h1>
+      <p>Shërbim në mënyrë të përkryer</p>
+    </div>
+   
+    <img src="fotot/slider1.jpg" alt="Header Photo">
+  </section>
+
+  <!-- Another Section with Paragraph and Picture -->
+  <section class="content-section">
+    <div class="left-content">
+      <h1 class="h1-section">Rreth nesh</h1>
+      <p>Ne jemi një restaurant i njohur me menu prestigjioze nga vendet e ndryshme të botës</p>
+      <ul>
+        <li>Ofrojmë shërbim të ngrohtë dhe të shpejtë</li>
+        <li>Me një ndërthurje të veqantë të specialiteteve nga kuzhinieret tanë</li>
+        <li>Ambient komod dhe elegant</li>
+      </ul>
+      <p>Kuzhina jonë është e pasur me ushqime të gatuara me delikatesë që nga ato tradicionalet, të cilat gjatë degustimit të rikujtojnë pjatat e ngrohta të gjyshes apo ato pjata të shpejta që i gatuajmë në përditshmëri e që shijojnë më shumë tek ne</p>
+    </div>
+    <div class="right-content">
+      <img src="fotot/slider2.jpg" alt="Right Content Image">
+    </div>
+  </section>
+  <section id="why-choose-us" class="content-section">
+    <div class="left-content">
+      <img src="fotot/pse-ne.jpg" alt="Why Choose Us Image">
+    </div>
+    <div class="right-content">
+      <h2>Pse zgjedhja e Restaurantit tonë</h2>
+      <ul>
+        <li>
+          <p>Menuja jonë moderne si dhe tradicionale ofron ushqime të ndryshme e të shijshme</p>
+        </li>
+        <li>
+          <p>Shërbimi ynë profesional lejon që ju të ndiheni si në shtëpinë tuaj</p>
+        </li>
+        <li>
+          <p>Vendndodhja jonë bën që ju ta keni afër restaurantin kudo që jeni</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+ 
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script src="your-script.js"></script>
+ 
+ 
+  <section id="header">
+    <h1>Na Kontaktoni</h1>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact-us">
+    <div id="left-content">
+      <div class="info-item">
+        <div class="circle">
+          <img src="fotot/location.png" alt="Location Image">
+        </div>
+        <div class="info-text">
+          <h2>Lokacioni:</h2>
+          <p>Rruga Adem Jashari Prizren, Kosovë</p>
+        </div>
+      </div>
+    
+      <div class="info-item">
+        <div class="circle">
+          <img src="fotot/orari.png" alt="Orari Image">
+        </div>
+        <div class="info-text">
+          <h2>Orari:</h2>
+          <p>This is the content of header 2.</p>
+        </div>
+      </div>
+    
+      <div class="info-item">
+        <div class="circle">
+          <img src="fotot/email.png" alt="Email Image">
+        </div>
+        <div class="info-text">
+          <h2>Email:</h2>
+          <p>restaurantvenecia@gmail.com</p>
+        </div>
+      </div>
+    
+      <div class="info-item">
+        <div class="circle">
+          <img src="fotot/telephone.png" alt="Telefoni Image">
+        </div>
+        <div class="info-text">
+          <h2>Telefoni:</h2>
+          <p>+383 44 383 249</p>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    <form id="contact-form">
+        <label for="name">Emri:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Tema:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Mesazhi:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Dërgo</button>
+    </form>
+</section>
+<div data-aos="fade-up">
+  <iframe style="border:0; width: 100%; height: 350px;" src="https://maps.google.com/maps?q=rruga%20adem%20jashari,%20prizren&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="floating-arrow" onclick="scrollToTop()">
+  <i class="fas fa-arrow-up"></i>
+</div>
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Restaurant Venecia</h3>
+              <p>
+                Rruga Adem Jashari <br>
+                Prizren, Kosovë<br><br>
+                <strong>Telefoni:</strong> +383 44 383 249<br>
+                <strong>Emaili:</strong> restaurantvenecia@gmail.com<br>
+              </p>
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Restaurant Venecia</span></strong>. All Rights Reserved
+      </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script src="your-script.js"></script>
+</body>
+</html>
