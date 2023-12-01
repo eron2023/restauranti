@@ -1,5 +1,5 @@
 /* stili.css */
-
+/*Home*/
 body {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000; /* Ensure the navigation is on top of other elements */
+    z-index: 1000; 
   }
   
 
@@ -42,7 +42,7 @@ nav a {
 .header {
     position: relative;
     overflow: hidden;
-    margin-top: 28px; /* Adjust margin-top as needed */
+    margin-top: 28px; 
   }
 
   .header img {
@@ -51,185 +51,137 @@ nav a {
     margin-top: 19px;
     filter: brightness(70%);
     margin-bottom: 0%;
-     /* Adjust max-height as needed */
+     
   }
 
-  .header-overlay {
+  .header-teksti {
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffff; /* Adjust the color as needed */
+    color: #ffffff; 
     text-align: center;
     z-index: 1;
   }
 
 
-  .header-overlay h1 {
-    font-size: 45px; /* Adjust the font size as needed */
+  .header-teksti h1 {
+    font-size: 45px; 
     margin-bottom: 10px;
   }
 
-  .header-overlay p {
-    font-size: 18px; /* Adjust the font size as needed */
+  .header-teksti p {
+    font-size: 18px; 
   }
-  /*Content Section*/
-  .content-section {
+  /*Mbarimi i Headerit */
+
+  /*permbajtja*/
+
+  .permbajtja {
     display: flex;
     margin-top: auto;
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-   background-color: #262729; /* Set the background image */
-    color: #ffffff; /* Set the text color */
+   background-color: #262729; 
+    color: #ffffff; 
     
   }
-.h1-section {
+.h1-permbajtja {
    color: rgb(174, 98, 44);
 }
-  .left-content {
+  .teksti-headeri {
     width: 45%;
-    /* Set a dark overlay on the left content */
+    
     padding: 20px;
   }
 
-  .left-content h1 {
-    font-size: 2em; /* Adjust the font size as needed */
+  .teksti-headeri h1 {
+    font-size: 2em; 
     margin-bottom: 10px;
   }
 
-  .left-content p {
-    font-size: 1.2em; /* Adjust the font size as needed */
+  .teksti-headeri p {
+    font-size: 1.2em; 
     margin-bottom: 15px;
   }
 
-  .left-content ul {
+  .teksti-headeri ul {
     list-style: none;
     padding: 0;
    
   }
 
-  .left-content ul li {
+  .teksti-headeri ul li {
     margin-bottom: 20px;
     margin-left: 16px;
     list-style-type:circle;
   }
 
-  .right-content img {
+  .fotoja-permbajtja img {
     width: 100%;
     height: auto;
   }
-/*Login form*/
-#main-content,
-#login,
-#register {
-    margin-top: 50px;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Your existing styles here */
+ /*mbarimi - permbajtja*/
 
 
 
-/* Content Section Styles */
-.content-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-}
+/*rubrika pse-ne*/
 
-.left-content {
-    width: 45%;
-}
-
-.right-content img {
-    width: 100%;
-    height: auto;
-}
-
-/* Slider Navigation Arrows Styles */
-.slick-prev,
-.slick-next {
-  font-size: 16px; /* Adjust the font size as needed */
-  color: #fff;
-
-  border: none;
-  padding: 5px; /* Adjust the padding as needed */
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.slick-prev {
-  left: 10px;
-}
-
-.slick-next {
-  right: 10px;
-}
-/* Add this CSS to your existing styles or create a new style file */
-/* Add this CSS to your existing styles or create a new style file */
-
-#why-choose-us {
+#pse-ne{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px;
-  background-color: #262729; /* Set the background color */
-  color: white; /* Set the text color */
+  background-color: #262729;
+  color: white; 
 }
 
-#why-choose-us .left-content img {
+#pse-nes .fotoja-pse-ne img {
   width: 100%;
   height: auto;
 }
 
-#why-choose-us .right-content {
-  width: 50%; /* Adjust the width as needed */
+#pse-ne .teksti-pse-ne {
+  width: 50%; 
 }
 
-#why-choose-us h2 {
-  font-size: 2em; /* Adjust the font size as needed */
+#pse-ne h2 {
+  font-size: 2em; 
   margin-bottom: 20px;
-  color: rgb(174, 98, 44); /* Set the heading color */
+  color: rgb(174, 98, 44); 
 }
 
-#why-choose-us ul {
+#pse-ne ul {
   list-style: none;
   padding: 0;
 }
 
-/* Add this CSS to your existing styles or create a new style file */
 
-#why-choose-us ul li {
-  margin-bottom: 15px; /* Adjust the margin as needed */
+
+#pse-ne ul li {
+  margin-bottom: 15px; 
   position: relative;
   display: flex;
-  align-items: center; /* Align the content vertically in each list item */
+  align-items: center;
 }
 
-#why-choose-us ul li::before {
-  content: '\2022'; /* Unicode character for a bullet point */
-  color: rgb(174, 98, 44); /* Set the bullet point color */
-  font-size: 1.5em; /* Adjust the font size as needed */
-  margin-right: 10px; /* Adjust the spacing between the bullet point and text */
+#pse-ne ul li::before {
+  content: '\2022'; 
+  color: rgb(174, 98, 44); 
+  font-size: 1.5em; 
+  margin-right: 10px; 
 }
 
-#why-choose-us p {
-  font-size: 1.2em; /* Adjust the font size as needed */
-  line-height: 1.6; /* Adjust the line height as needed */
+#pse-ne p {
+  font-size: 1.2em; 
+  line-height: 1.6; 
 }
 
+/*Mbarimi-rubrika pse-ne*/
 
-
-/* Add this CSS to your existing styles or create a new style file */
-#contact-us {
+/*Kontakti*/
+#Kontakti {
     display: flex;
     justify-content: space-between;
     padding: 40px;
@@ -238,7 +190,7 @@ nav a {
     
   }
 
-  #contact-form {
+  #Kontakti-form {
     width: 60%;
     max-width: 600px;
     text-align: center;
@@ -246,15 +198,15 @@ nav a {
     
   }
 
-  #contact-form label {
+  #Kontakti-form label {
     display: block;
     margin-bottom: 10px;
     text-align: left;
     
   }
 
-  #contact-form input,
-  #contact-form textarea {
+  #Kontakti-form input,
+  #Kontakti-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -263,7 +215,7 @@ nav a {
     box-sizing: border-box;
   }
 
-  #contact-form button {
+  #Kontakti-form button {
     width: 100%;
     background-color: rgb(174, 98, 44);
     color: white;
@@ -273,51 +225,36 @@ nav a {
     cursor: pointer;
   }
 
-  #contact-form button:hover {
+  #Kontakti-form button:hover {
     background-color: rgb(185, 88, 19);
   }
 
-  #contact-info {
-    max-width: 300px;
-    text-align: left;
-  }
-
-  #contact-info h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  #contact-info p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  #header {
+  #headeri-na-kontaktoni {
     text-align: center;
     color: white;
-    padding-top: 60px ; /* Adjust the padding as needed */
+    padding-top: 60px ; 
 }
 
-#header h1 {
+#headeri-na-kontaktoni h1 {
     font-size: 30px;
-    margin-bottom: 20px; /* Adjust the margin as needed */
+    margin-bottom: 20px; 
 }
 
 
-  #left-content {
+  #Kontakti-majte {
     width: 30%;
     text-align: left;
     display: flex;
     flex-direction: column;
   }
   
-  .info-item {
+  .info {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
   }
   
-  .circle {
+  .rrumbullaku {
     width: 40px;
     height: 40px;
     background-color: rgb(174, 98, 44);
@@ -326,28 +263,28 @@ nav a {
     margin-right: 10px;
   }
   
-  .circle img {
+  .rrumbullaku img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .info-text {
+  .info-teksti {
     flex-grow: 1;
   }
   
-  #left-content h2 {
+  #Kontakti-majte h2 {
     margin-bottom: 10px;
     color: white;
   }
   
-  #left-content p {
+  #Kontakti-majte p {
     margin-bottom: 20px;
     color: white;
   }
   
 
-
+/*Mbarimi i Kontaktik*/
 
 #footer {
     background: #333639;
@@ -406,106 +343,8 @@ nav a {
     font-size: 13px;
     color: #fff;
   }
-  /*Login*/
-  #login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-  }
   
-  #login-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
   
-  .login-header {
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-sizing: border-box;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  
-  #register-link {
-    text-align: center;
-    margin-top: 15px;
-  }
-  
-  #register {
-    display: none;
-  }
-  #register {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  #register-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-  }
-  .regjister-header {
-    margin-bottom: 20px; 
-    text-align: center;/* Adjust margin as needed */
-  }
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-sizing: border-box;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
-  /*shigjeta per web*/
   .floating-arrow {
     position: fixed;
     bottom: 20px;
@@ -525,3 +364,391 @@ nav a {
     opacity: 1;
     background-color: rgba(255, 165, 0, 0.1); 
   }
+  /* Menu.html css-i*/
+
+  .menuja {
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: black; 
+    color: #ffffff; 
+  }
+  
+  .h1B {
+    color: rgb(174, 98, 44);
+    text-align: center;
+  }
+  
+  .Pjesa-majteB {
+    width: 45%;
+    
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .Pjesa-majteB h1 {
+    font-size: 2em; 
+    margin-bottom: 10px;
+  }
+  
+  .Pjesa-majteB p {
+    font-size: 1.2em; 
+    margin-bottom: 15px;
+  }
+  
+  .pjesa-e-djathteB img {
+    width: 100%;
+    height: auto;
+  }
+  
+ 
+.Pjesa-majteB button.redirect-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px 8px; 
+  margin-top: 5px; 
+  border: 6px solid transparent;
+  border-radius: 15px;
+  background-color: rgb(174, 98, 44);
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.Pjesa-majteB button.redirect-button a {
+  color: #ffffff;
+  text-decoration: none; 
+}
+
+.Pjesa-majteB button.redirect-button:hover {
+  background-color: #ff8c00; 
+ 
+}
+.menu-foto-permbajtja {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.menu-foto {
+  text-align: center;
+  border: 2px solid #ff8c00;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  margin: 0 10px;
+}
+
+.menu-foto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.menu-foto-header {
+  font-size: 18px;
+  color: #ff8c00;
+  margin: 10px 0;
+}
+
+.menu-foto-paragraph {
+  color: #ffffff; /* White text color */
+  margin: 10px 0;
+}
+
+.menu-foto-button a {
+  text-decoration: none; /* Remove underline */
+  color: #ffffff; /* White text color */
+}
+
+.menu-foto-button {
+  display: inline-block;
+  width: 150px;
+  padding: 8px 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 6px solid transparent;
+  border-radius: 15px;
+  background-color: rgb(174, 98, 44);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-foto-button:hover {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+}
+
+.menu-title {
+  text-align: center;
+  margin: 20px 0; 
+}
+
+.orange-text {
+  color: #ff8c00; 
+  font-size:40px
+}
+/* perfundimi - tre fotot*/
+
+/*permbajtja 2 (Fast foodi)*/
+.permbajtja2 {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+ background-color: #262729; 
+  color: #ffffff; 
+  
+}
+.h1-2 {
+ color: rgb(174, 98, 44);
+}
+.pjesa-e-majte2 {
+  width: 45%;
+  
+  padding: 20px;
+}
+
+.pjesa-e-majte2 h1 {
+  font-size: 2em; 
+  margin-bottom: 10px;
+}
+
+.pjesa-e-majte2 p {
+  font-size: 1.2em; 
+  margin-bottom: 15px;
+}
+
+.pjesa-e-majte2 ul {
+  list-style: none;
+  padding: 0;
+ 
+}
+
+.pjesa-e-majte2 ul li {
+  margin-bottom: 20px;
+  margin-left: 16px;
+  list-style-type:circle;
+}
+
+.pjesa-e-djathte2 img {
+  width: 55%;
+  border-radius: 8px;
+  height: auto;
+  margin-left: 220px;
+}
+
+
+/*perfundimi - permbajtja 2 (Fast foodi)*/
+
+/*permbajtja 3 - Pasta*/
+
+#permbajtja3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #262729;
+  color: white; 
+}
+
+#permbajtja3 .pjesa-e-majte3 img {
+  width: 75%;
+  border-radius: 8px;
+  height: auto;
+  margin-left: 10px;
+}
+
+#permbajtja3 .pjesa-e-djathte3 {
+  width: 50%; 
+}
+
+#permbajtja3 h2 {
+  font-size: 2em; 
+  margin-bottom: 20px;
+  color: rgb(174, 98, 44); 
+}
+
+#permbajtja3 ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+#permbajtja3 ul li {
+  margin-bottom: 15px; 
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#permbajtja3 ul li::before {
+  content: '\2022'; 
+  color: rgb(174, 98, 44); 
+  font-size: 1.5em; 
+  margin-right: 10px; 
+}
+
+#permbajtja3 p {
+  font-size: 1.2em; 
+  line-height: 1.6; 
+}
+
+/*perfundimi - permbajtja 3 - Pasta*/
+
+/*permbajtja 4 - Flia*/
+
+.permbajtja4 {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+ background-color: #262729; 
+  color: #ffffff; 
+  
+}
+.h1-4 {
+ color: rgb(174, 98, 44);
+}
+.pjesa-e-majte4 {
+  width: 45%;
+  
+  padding: 20px;
+}
+
+.pjesa-e-majte4 h1 {
+  font-size: 2em; 
+  margin-bottom: 10px;
+}
+
+.pjesa-e-majte4 p {
+  font-size: 1.2em; 
+  margin-bottom: 15px;
+}
+
+.pjesa-e-majte4 ul {
+  list-style: none;
+  padding: 0;
+ 
+}
+
+.pjesa-e-majte4 ul li {
+  margin-bottom: 20px;
+  margin-left: 16px;
+  list-style-type:circle;
+}
+
+.pjesa-e-djathte4 img {
+  width: 75%;
+  border-radius: 8px;
+  height: auto;
+  margin-left: 150px;
+}
+/*perfundimi - permbajtja 4 - Flia*/
+
+/*Login dhe regjistrimi*/
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+#login-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-header {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#register-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#register {
+  display: none;
+}
+#register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#register-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+.regjister-header {
+  margin-bottom: 20px; 
+  text-align: center;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #555;
+}

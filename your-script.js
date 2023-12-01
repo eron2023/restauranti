@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const mainContent = document.getElementById('main-content');
   const loginForm = document.getElementById('login');
   const registerForm = document.getElementById('register');
-  const navLinks = document.querySelector('nav ul'); // select the entire list of nav links
+  const navLinks = document.querySelector('nav ul'); 
 
   loginLink.addEventListener('click', function (event) {
     event.preventDefault();
@@ -32,15 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Form Submission Logic
+  
   const contactForm = document.getElementById('contact-form');
 
   if (contactForm) {
     contactForm.addEventListener('submit', function (event) {
       event.preventDefault();
-      // Add your form submission logic here
-      // You can use AJAX or other methods to send the form data to your server
-      // For example, you can use the Fetch API or jQuery AJAX
+     
     });
   }
 });
