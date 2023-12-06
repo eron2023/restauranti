@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="stil.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+ 
 </head>
 <body class="Login-Body">
   <nav>
@@ -17,9 +18,21 @@
       <li><a href="Login.html" id="login-link">Login</a></li>
     </ul>
   </nav>
-  <section id="login" class="hidden">
-    <form id="login-form" action="faqja-kryesore.html" method="get">
-      <h3 class="login-header">Login</h3>
+  <section id="register" class="hidden">
+    <form id="register-form" action="faqja-kryesore.html" method="get">
+      <h3 class="login-header">Register</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <p id="nameError"></p>
+
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" name="surname" required>
+      <p id="surnameError"></p>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+      <p id="phoneError"></p>
+
       <label for="email">Email:</label>
       <input type="text" id="email" name="email" required>
       <p id="emailError"></p>
@@ -27,8 +40,8 @@
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
       <p id="passwordError"></p>
-      <button type="button" onclick="validateLoginForm()">Login</button>
-      <p>Akoma nuk jeni regjistruar?<a href="register.html"> Kliko ketu</a></p>
+
+      <button type="button"  id="registerButton">Register</button>
     </form>
   </section>
   <script src="skripti.js"></script>

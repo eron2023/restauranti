@@ -661,67 +661,6 @@ nav a {
 }
 /*perfundimi - permbajtja 4 - Flia*/
 
-/*Login dhe regjistrimi*/
-.Login-Body {
-  background-image: url(fotot/slider1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* This ensures the background image stays fixed while scrolling */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-#login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  width:75%;
-  
-}
-
-#login-form {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  width: 25%;
-  height: 28%;
-}
-
-.login-header {
-  text-align: center;
-}
-
-label {
-  display: block;
-  margin-top: 10px;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-
-button {
-  width: 100%;
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-button:hover {
-  background-color: #555;
-}
 
 
 /* Slideri */
@@ -826,4 +765,115 @@ button:hover {
 .menu-totali{
   border-top: 2px solid #37332a;
   border-bottom:2px solid #37332a;
+}
+
+/*Login dhe regjistrimi*/
+.Login-Body {
+  background-image: url(fotot/slider1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width:75%;
+  
+}
+
+#login-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  height: 30%;
+}
+
+.login-header {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 75%;
+}
+
+#register-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  height: 55%;
+}
+
+.login-header {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #555;
 }
