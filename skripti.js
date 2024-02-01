@@ -1,49 +1,66 @@
-  /* Login */
 document.addEventListener('DOMContentLoaded', function () {
   let emailRegex = /^[a-zA-Z.-_]+@[a-z]+\.[a-z]{2,3}$/;
   let passwordRegex = /^(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*\d).{4,20}$/;
 
-  function validateLoginForm() {
-      let emailInput = document.getElementById('email');
-      let emailError = document.getElementById('emailError');
-      let passwordInput = document.getElementById('password');
-      let passwordError = document.getElementById('passwordError');
+  function validateEmail() {
+    let emailInput = document.getElementById('email');
+    let emailError = document.getElementById('emailError');
+    emailError.innerText = '';
 
-      emailError.innerText = '';
-      passwordError.innerText = '';
-
-      if (!emailRegex.test(emailInput.value)) {
-          emailError.innerText = 'Formati i Emailit eshte i gabuar';
-          return;
-      }
-
-      if (!passwordRegex.test(passwordInput.value)) {
-          passwordError.innerText = 'Ju lutem shenoni nje shkronje te madhe se pari dhe nje numer';
-          return;
-      }
-
-      alert('Jeni Kyqur me Sukses');
-      window.location.href = 'faqja-kryesore.html';
+    if (!emailRegex.test(emailInput.value)) {
+      emailError.innerText = 'Formati i Emailit eshte i gabuar';
+    }
   }
 
-  document.getElementById('password').addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
-          validateLoginForm();
-      } else if (event.key === 'ArrowUp') {
-          document.getElementById('email').focus();
-      }
+  function validatePassword() {
+    let passwordInput = document.getElementById('password');
+    let passwordError = document.getElementById('passwordError');
+    passwordError.innerText = '';
+
+    if (!passwordRegex.test(passwordInput.value)) {
+      passwordError.innerText =
+        'Ju lutem shenoni nje shkronje te madhe se pari dhe nje numer';
+    }
+  }
+
+  function validateLoginForm() {
+    validateEmail();
+    validatePassword();
+
+    let emailError = document.getElementById('emailError');
+    let passwordError = document.getElementById('passwordError');
+
+    if (!emailError.innerText && !passwordError.innerText) {
+      alert('Jeni Kyqur me Sukses');
+      window.location.href = 'index.php';
+    }
+  }
+
+  document.getElementById('password').addEventListener('input', function () {
+    validatePassword();
+  });
+
+  document.getElementById('email').addEventListener('input', function () {
+    validateEmail();
+  });
+
+  document.getElementById('submit-button').addEventListener('click', function () {
+    validateLoginForm();
   });
 
   document.getElementById('email').addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
-          validateLoginForm();
-      } else if (event.key === 'ArrowDown') {
-          document.getElementById('password').focus();
-      }
+    if (event.key === 'Enter') {
+      validateLoginForm();
+    } else if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      document.getElementById('password').focus();
+    }
   });
-
 });
- // Rregjistrimi
+
+
+
+ // Regjistrimi
  document.addEventListener('DOMContentLoaded', function () {
   let emailRegex = /^[a-zA-Z.-_]+@[a-z]+\.[a-z]{2,3}$/;
   let passwordRegex = /^(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*\d).{4,20}$/;
@@ -104,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     alert('Jeni regjistruar me sukses!');
-    window.location.href = 'faqja-kryesore.html';
+    window.location.href = 'index.php';
   }
 
   function navigateOnArrowPress(event, currentElement, nextElementId, previousElementId) {
@@ -201,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       alert('Mesazhi u dërgua me sukses!');
-      // You may add additional logic to handle form submission
+      window.location.href = 'index.php'; // Redirect to index.php
   }
 
   document.getElementById('message').addEventListener('keydown', function (event) {
@@ -236,12 +253,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // You can also add an event listener for the form submission
+  // Add an event listener for the form submission
   document.getElementById('Kontakti-form').addEventListener('submit', function (event) {
     event.preventDefault();
     validateContactForm();
   });
+
+  // Add an event listener for the click event on the submit button
+  document.getElementById('submit-button').addEventListener('click', function () {
+    validateContactForm();
+  });
 });
+
 
 /*shigjeta per web me dergu ma nalt*/
 function scrollToTop() {
