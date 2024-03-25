@@ -216,9 +216,6 @@ document.addEventListener('DOMContentLoaded', function () {
           messageError.innerText = 'Ju lutem shkruani nje mesazh.';
           return;
       }
-
-      alert('Mesazhi u dërgua me sukses!');
-      window.location.href = 'index.php'; // Redirect to index.php
   }
 
   document.getElementById('message').addEventListener('keydown', function (event) {
@@ -255,7 +252,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Add an event listener for the form submission
   document.getElementById('Kontakti-form').addEventListener('submit', function (event) {
-    event.preventDefault();
     validateContactForm();
   });
 
@@ -324,4 +320,3 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
-

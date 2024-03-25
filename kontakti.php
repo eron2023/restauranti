@@ -1,3 +1,19 @@
+<?php
+session_start();
+include_once 'kontaktRepository.php';
+include_once 'kontakt.php';
+
+if (isset($_POST["Kontakt-submit"])) {
+    $kontakt = new Kontakt(null, $_POST["name"], $_POST["email"], $_POST["subject"], $_POST["message"]);
+    $kontaktRepo = new KontaktRepository;
+        $kontaktRepo->insertKontakt($kontakt);
+          echo "<script>
+                  if (window.confirm('Success!')) {
+                      window.location.href='menu.php';
+                  }
+              </script>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,25 +77,26 @@
 
 
 
-    <form id="Kontakti-form" action="index.php" method="get">
-      <div id="nameError" class="error"></div>
-      <label for="name">Emri:</label>
-      <input type="text" id="name" name="name" required>
+    <form id="Kontakti-form" action="<?php echo $_SERVER["PHP_SELF"]?>" method="post">
+        
+        <div id="nameError" class="error"></div>
+        <label for="name">Emri:</label>
+        <input type="text" id="name" name="name" required>
 
-      <div id="emailError" class="error"></div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+        <div id="emailError" class="error"></div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-      <div id="subjectError" class="error"></div>
-      <label for="subject">Tema:</label>
-      <input type="text" id="subject" name="subject" required>
+        <div id="subjectError" class="error"></div>
+        <label for="subject">Tema:</label>
+        <input type="text" id="subject" name="subject" required>
 
-      <div id="messageError" class="error"></div>
-      <label for="message">Mesazhi:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+        <div id="messageError" class="error"></div>
+        <label for="message">Mesazhi:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-      <button type="button" onclick="validateContactForm()">Dërgo</button>
-  </form>
+        <button type="submit"  id="submit-button" name="Kontakt-submit">Dërgo</button>
+    </form>
 </section>
 
 <div class="floating-arrow" onclick="scrollToTop()">

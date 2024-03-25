@@ -1,3 +1,20 @@
+<?php
+session_start();
+include_once 'kontaktRepository.php';
+include_once 'kontakt.php';
+
+if (isset($_POST["Kontakt-submit"])) {
+    $kontakt = new Kontakt(null, $_POST["name"], $_POST["email"], $_POST["subject"], $_POST["message"]);
+    $kontaktRepo = new KontaktRepository;
+        $kontaktRepo->insertKontakt($kontakt);
+          echo "<script>
+                  if (window.confirm('Success!')) {
+                      window.location.href='menu.php';
+                  }
+              </script>";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,58 +22,106 @@
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <style>
+<style>
+  
+#pse-ne{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center; 
+  padding: 40px;
+  background-color: #262729;
+  color: white; 
+}
+
+#pse-nes .fotoja-pse-ne img {
+  width: 100%;
+  height: auto;
+}
+
+#pse-ne .teksti-pse-ne {
+  width: 50%; 
+}
+
+#pse-ne h2 {
+  font-size: 2em; 
+  margin-bottom: 20px;
+  color: rgb(174, 98, 44); 
+}
+
+#pse-ne ul {
+  list-style: none;
+  padding: 0;
+}
 
 
-        .menu-foto-permbajtja {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
 
-        .menu-foto {
-            width: 100%;
-            max-width: 300px;
-            margin-bottom: 20px;
-        }
+#pse-ne ul li {
+  margin-bottom: 15px; 
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
-       .permbajtja2,
-    .permbajtja3,
-    .permbajtja4 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center; 
-        text-align: center; 
-        padding: 20px; 
+#pse-ne ul li::before {
+  content: '\2022'; 
+  color: rgb(174, 98, 44); 
+  font-size: 1.5em; 
+  margin-right: 10px; 
+}
+
+#pse-ne p {
+  font-size: 1.2em; 
+  line-height: 1.6; 
+}
+.fotoja-pse-ne {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#pse-ne img {
+  width: 100%;
+  height: auto;
+}
+
+#pse-ne div {
+  max-width: 600px; 
+}
+
+#pse-ne h2 {
+  color: white;
+}
+
+#pse-ne ul {
+  list-style: none;
+  padding: 0;
+}
+
+#pse-ne ul li {
+  margin-bottom: 10px;
+}
+
+  .menu-foto-permbajtja {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  .menu-foto {
+      width: 80%;
+      max-width: 300px; 
+      margin-bottom: 20px;
+  }
+
+@media only screen and (min-width: 768px) {
+      
+      .slider {
+          width: 90%; 
+      }
     }
-
-    .permbajtja2 img,
-    .permbajtja3 img,
-    .permbajtja4 img {
-        width: 100%;
-        max-width: 400px; 
-        height: auto;
-    }
-
-    .permbajtja2 h1,
-    .permbajtja3 h2,
-    .permbajtja4 h1 {
-        color: white;
-    }
-
-    .permbajtja2 p,
-    .permbajtja3 ul,
-    .permbajtja4 p,
-    .permbajtja4 ul {
-        color: white;
-    }
-
-    .permbajtja3 li,
-    .permbajtja4 li {
-        margin-bottom: 10px;
-    }
-    </style>
+  </style>
 </head>
 <body>
 <?php
@@ -77,33 +142,30 @@
   </section>
 
   
-  <section class="menu-foto-permbajtja">
-    <div class="menu-foto">
-      <img src="fotot/hamburgeri.jpg" alt="Menu Foto 1">
-      <h3 class="menu-foto-header">Hamburger</h3>
-      <p class="menu-foto-paragraph">Menuja jonë e gjerë mundëson që të ketë jo vetëm menu tradicionale e moderne por edhe Fast Food që në kohët e sotme po përdoret mjaft shum.</p>
-      <button class="menu-foto-button"><a href="#">Fast Food</a></button>
-    </div>
-  
-    <div class="menu-foto">
-      <img src="fotot/spaghetti.jpg" alt="Menu Foto 2">
-      <h3 class="menu-foto-header">Spaghetti</h3>
-      <p class="menu-foto-paragraph">Pasta të shijshme me recetë italiane e unike, të servirura me salcë domateje të freskët e me djath mozarella.</p>
-      <button class="menu-foto-button"><a href="#">Pasta</a></button>
-    </div>
-  
-    <div class="menu-foto">
-      <img src="fotot/flia.jpg" alt="Menu Foto 3">
-      <h3 class="menu-foto-header">Flia</h3>
-      <p class="menu-foto-paragraph">Menu tradicionale shqiptare e shijshme dhe e lëngshme e bërë me shum dashuri nga kuzhinieret tanë.</p>
-      <button class="menu-foto-button"><a href="#">Tradicionale</a></button>
-    </div>
-  </section>
+  <section class="menu-totali">
+      <div class="menu-title">
+        <h2 class="orange-text">Menu</h2>
+      </div>
+      <section class="menu-foto-permbajtja">
+      <?php
+        include_once 'productRepository.php';
+        include_once 'product.php';
 
+        $productRepo = new ProductRepository;
+        $products = $productRepo->getAllProduktet();
 
-
-
-
+        foreach($products as $product){
+          echo "
+            <div class=\"menu-foto\">
+                    <img src=\"" . $product['Img_Link'] . "\" />
+                    <h3 class=\"menu-foto-header\">" . $product['Titulli'] . "</h4>
+                    <p class=\"menu-foto-paragraph\">" . $product['Description'] . "</p>
+                    <button class=\"menu-foto-button\"><a href=\"menu.php\">".$product['Kategoria']."</a></button>
+            </div>
+          ";
+        }
+      ?>
+      </section>
 
   <section class="permbajtja2">
     <div class="pjesa-e-majte2">
@@ -213,7 +275,7 @@
   
   
   
-      <form id="Kontakti-form" action="index.php" method="get">
+      <form id="Kontakti-form" action="<?php echo $_SERVER["PHP_SELF"]?>" method="post">
         
         <div id="nameError" class="error"></div>
         <label for="name">Emri:</label>
@@ -231,7 +293,7 @@
         <label for="message">Mesazhi:</label>
         <textarea id="message" name="message" rows="4" required></textarea>
 
-        <button type="button"  id="submit-button" onclick="validateContactForm()">Dërgo</button>
+        <button type="submit"  id="submit-button" name="Kontakt-submit">Dërgo</button>
     </form>
   </section>
 </section>
@@ -239,7 +301,6 @@
 <div class="floating-arrow" onclick="scrollToTop()">
   <i class="fas fa-arrow-up"></i>
 </div>
-
 
 <?php
      include 'footeri.php';

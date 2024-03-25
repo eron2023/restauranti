@@ -97,7 +97,21 @@
             <li><a href="online.php">Porosit Online</a></li>
             <li><a href="rezervo.php">Rezervo</a></li>
             <li><a href="kontakti.php">Kontakti</a></li>
-            <li><a href="Login.php" id="login-link">Login</a></li>
+            <?php
+            if (isset($_SESSION['ID'])) {
+                echo '<li><a href="#">Welcome ' . $_SESSION['name'] . '</a></li>';
+                if ($_SESSION['isAdmin'] == 1) {
+                    echo '<li onclick="openLink(\'MonitoroUsers.php\')"><a href="#">Users</a></li>';
+                    echo '<li onclick="openLink(\'upload.php\')"><a href="#">Insert Products</a></li>';
+                    echo '<li onclick="openLink(\'rezervimetDash.php\')"><a href="#">Rezervimet</a></li>';
+                    echo '<li onclick="openLink(\'productDash.php\')"><a href="#">Menaxho Produktet</a></li>';
+                    echo '<li onclick="openLink(\'mesazhet.php\')"><a href="#">Mesazhet</a></li>';
+                }
+                echo '<li onclick="openLink(\'LogOut.php\')"><a href="#">Log Out</a></li>';
+            } else {
+                echo '<li onclick="openLink(\'Login.php\')"><a href="#">Log In</a></li>';
+            }
+            ?>
         </ul>
         <i class="fas fa-bars" id="menu-icon"></i>
     </nav>
@@ -124,4 +138,8 @@
 
         window.addEventListener('resize', adjustMenuIcon);
         window.addEventListener('load', adjustMenuIcon);
+        
+        function openLink(link){
+            window.open(link, "_self");
+        }
     </script>

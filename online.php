@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -47,39 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Restaurant Venecia</title>
     <link rel="stylesheet" href="stil.css"> 
     <style>
-        body {
-            color: white;
-            padding: 20px; 
-        }
-
-        input[type="number"] {
-            width: 40px;
-            text-align: center;
-        }
-
-       
-        button {
-            width: 150px; 
-            background-color: rgb(174, 98, 44);
-            color: white;
-            border: none;
-            padding: 10px; 
-            border-radius: 5px;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-        form {
-            text-align: center;
-        }
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 4px solid rgb(174, 98, 44); 
-            margin-bottom: 10px; 
-            margin-top: 10px; 
-           
-        }
+     
     </style>
 </head>
 <body>

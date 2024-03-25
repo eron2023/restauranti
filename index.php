@@ -1,3 +1,19 @@
+<?php
+session_start();
+include_once 'kontaktRepository.php';
+include_once 'kontakt.php';
+
+if (isset($_POST["Kontakt-submit"])) {
+    $kontakt = new Kontakt(null, $_POST["name"], $_POST["email"], $_POST["subject"], $_POST["message"]);
+    $kontaktRepo = new KontaktRepository;
+        $kontaktRepo->insertKontakt($kontakt);
+          echo "<script>
+                  if (window.confirm('Success!')) {
+                      window.location.href='menu.php';
+                  }
+              </script>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,61 +24,102 @@
     <link rel="stylesheet" href="stil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
  <style>
-     #pse-ne {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center; 
-        text-align: center; 
+       .menu-foto-permbajtja {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  .menu-foto {
+      width: 80%;
+      max-width: 300px; 
+      margin-bottom: 20px;
+  }
+
+@media only screen and (min-width: 768px) {
+      
+      .slider {
+          width: 90%; 
+      }
     }
+    #pse-ne{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center; 
+  padding: 40px;
+  background-color: #262729;
+  color: white; 
+}
 
-    .fotoja-pse-ne {
-        width: 100%;
-        max-width: 400px;
-        margin-bottom: 20px;
-    }
+#pse-nes .fotoja-pse-ne img {
+  width: 100%;
+  height: auto;
+}
 
-    #pse-ne img {
-        width: 100%;
-        height: auto;
-    }
+#pse-ne .teksti-pse-ne {
+  width: 50%; 
+}
 
-    #pse-ne div {
-        max-width: 600px; 
-    }
+#pse-ne h2 {
+  font-size: 2em; 
+  margin-bottom: 20px;
+  color: rgb(174, 98, 44); 
+}
 
-    #pse-ne h2 {
-        color: white;
-    }
+#pse-ne ul {
+  list-style: none;
+  padding: 0;
+}
 
-    #pse-ne ul {
-        list-style: none;
-        padding: 0;
-    }
 
-    #pse-ne ul li {
-        margin-bottom: 10px;
-    }
 
-        .menu-foto-permbajtja {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
+#pse-ne ul li {
+  margin-bottom: 15px; 
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
-        .menu-foto {
-            width: 80%;
-            max-width: 300px; 
-            margin-bottom: 20px;
-        }
+#pse-ne ul li::before {
+  content: '\2022'; 
+  color: rgb(174, 98, 44); 
+  font-size: 1.5em; 
+  margin-right: 10px; 
+}
 
-   @media only screen and (min-width: 768px) {
-            
-            .slider {
-                width: 90%; 
-            }
-          }
-         
+#pse-ne p {
+  font-size: 1.2em; 
+  line-height: 1.6; 
+}
+.fotoja-pse-ne {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#pse-ne img {
+  width: 100%;
+  height: auto;
+}
+
+#pse-ne div {
+  max-width: 600px; 
+}
+
+#pse-ne h2 {
+  color: white;
+}
+
+#pse-ne ul {
+  list-style: none;
+  padding: 0;
+}
+
+#pse-ne ul li {
+  margin-bottom: 10px;
+}
  </style>
 </head>
 <body>
@@ -105,28 +162,25 @@
       <div class="menu-title">
         <h2 class="orange-text">Menu</h2>
       </div>
-    
       <section class="menu-foto-permbajtja">
-        <div class="menu-foto">
-          <img src="fotot/hamburgeri.jpg" alt="Menu foto 1">
-          <h3 class="menu-foto-header">Hamburger</h3>
-          <p class="menu-foto-paragraph">Menuja jonë e gjerë mundëson që të ketë jo vetëm menu tradicionale e moderne por edhe Fast Food që në kohët e sotme po përdoret mjaft shum.</p>
-          <button class="menu-foto-button"><a href="menu.php">Fast Food</a></button>
-        </div>
-      
-        <div class="menu-foto">
-          <img src="fotot/spaghetti.jpg" alt="Menu foto 2">
-          <h3 class="menu-foto-header">Spaghetti</h3>
-          <p class="menu-foto-paragraph">Pasta të shijshme me recetë italiane e unike, të servirura me salcë domateje të freskët e me djath mozarella.</p>
-          <button class="menu-foto-button"><a href="menu.php">Pasta</a></button>
-        </div>
-      
-        <div class="menu-foto">
-          <img src="fotot/flia.jpg" alt="Menu foto 3">
-          <h3 class="menu-foto-header">Flia</h3>
-          <p class="menu-foto-paragraph">Menu tradicionale shqiptare e shijshme dhe e lëngshme e bërë me shum dashuri nga kuzhinieret tanë.</p>
-          <button class="menu-foto-button"><a href="menu.php">Tradicionale</a></button>
-        </div>
+      <?php
+        include_once 'productRepository.php';
+        include_once 'product.php';
+
+        $productRepo = new ProductRepository;
+        $products = $productRepo->getAllProduktet();
+
+        foreach($products as $product){
+          echo "
+            <div class=\"menu-foto\">
+                    <img src=\"" . $product['Img_Link'] . "\" />
+                    <h3 class=\"menu-foto-header\">" . $product['Titulli'] . "</h4>
+                    <p class=\"menu-foto-paragraph\">" . $product['Description'] . "</p>
+                    <button class=\"menu-foto-button\"><a href=\"menu.php\">".$product['Kategoria']."</a></button>
+            </div>
+          ";
+        }
+      ?>
       </section>
     </section>
       <section id="pse-ne">
@@ -204,26 +258,27 @@
      
     
     
-        <form id="Kontakti-form" action="index.php" method="get">
-          
-          <div id="nameError" class="error"></div>
-          <label for="name">Emri:</label>
-          <input type="text" id="name" name="name" required>
+        
+      <form id="Kontakti-form" action="<?php echo $_SERVER["PHP_SELF"]?>" method="post">
+        
+        <div id="nameError" class="error"></div>
+        <label for="name">Emri:</label>
+        <input type="text" id="name" name="name" required>
 
-          <div id="emailError" class="error"></div>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+        <div id="emailError" class="error"></div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-          <div id="subjectError" class="error"></div>
-          <label for="subject">Tema:</label>
-          <input type="text" id="subject" name="subject" required>
+        <div id="subjectError" class="error"></div>
+        <label for="subject">Tema:</label>
+        <input type="text" id="subject" name="subject" required>
 
-          <div id="messageError" class="error"></div>
-          <label for="message">Mesazhi:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+        <div id="messageError" class="error"></div>
+        <label for="message">Mesazhi:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-          <button type="button"  id="submit-button" onclick="validateContactForm()">Dërgo</button>
-      </form>
+        <button type="submit"  id="submit-button" name="Kontakt-submit">Dërgo</button>
+    </form>
     </section>
   </section>
 
